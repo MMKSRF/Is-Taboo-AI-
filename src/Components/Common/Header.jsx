@@ -5,10 +5,10 @@ import { useHistoryToggle } from '../../Contexts/HistoryContext'; // Adjust the 
 
 const Header = ( ) => {
   const [isDarkMode, setIsDarkMode] = useState(false);
-  const [isHistoryOpen, setIsHistoryOpen] = useState(false);
+  // const [isHistoryOpen, setIsHistoryOpen] = useState(false);
   const [historySearchTerm, setHistorySearchTerm] = useState('');   
 
-  const {setIsHistoryOpen: toggleHistory} = useHistoryToggle(); // Assuming you have a context for history toggle
+  const {setIsHistoryOpen,isHistoryOpen} = useHistoryToggle(); // Assuming you have a context for history toggle
   
   
   const buttonRef = useRef(null);
