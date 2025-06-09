@@ -13,6 +13,7 @@ const Header = ( ) => {
   
   const buttonRef = useRef(null);
   const inputRef = useRef(null);
+  const flipRef = useRef();
 
 
   useEffect(() => {
@@ -41,6 +42,26 @@ const Header = ( ) => {
     }
   }, [isHistoryOpen]);
 
+
+
+
+   useEffect(() => {
+    const el = flipRef.current;
+
+    // Animate a Y-axis 3D flip
+    gsap.fromTo(el,
+      { rotationY: 180, opacity: 0, scale: 2 },
+      {
+        rotationY: 0,
+        opacity: 1,
+        scale: 1,
+        duration: 2,
+        ease: 'back.out(1.7)',
+      }
+    );
+    
+  }, [isDarkMode]);
+
   const handleToggleDarkMode = () => {
     const newIsDarkMode = !isDarkMode;
     setIsDarkMode(newIsDarkMode);
@@ -66,7 +87,7 @@ const Header = ( ) => {
 
   const handleHistoryButtonClick = () => {
     setIsHistoryOpen(!isHistoryOpen);
-    toggleHistory(!isHistoryOpen); // Toggle history state in context
+
     if (!isHistoryOpen) {
       inputRef.current.focus(); // Focus on input when opening history
     } else {
@@ -99,7 +120,7 @@ const Header = ( ) => {
           placeholder="Search history..."
           value={historySearchTerm}
           onChange={handleHistoryInputChange}
-          onBlur={() => setIsHistoryOpen(false)}
+          // onBlur={() => setIsHistoryOpen(false)}
           className="p-2 rounded-md bg-transparent border border-secondary focus:outline-none focus:ring-2 focus:ring-primary placeholder-text opacity-70 transition-colors duration-200 font-handlee"
           aria-label="Search chat history"
         />
@@ -129,7 +150,9 @@ const Header = ( ) => {
               <path d="M12 2c-4.97 0-9 4.03-9 9s4.03 9 9 9 9-4.03 9-9-4.03-9-9-9zm0 16c-3.87 0-7-3.13-7-7s3.13-7 7-7 7 3.13 7 7-3.13 7-7 7zM11 5h2v2h-2zm0 4h2v2h-2zm0 4h2v2h-2zm0 4h2v2h-2z"/>
             </svg>
           )}
-          <span className="font-handlee">{isDarkMode ? "Light Mode" : "Dark Mode"}</span>
+          <span className="font-handlee flip-text" ref={flipRef}>
+  {isDarkMode ? "Light Mode" : "Dark Mode"}
+</span>
         </button>
       </div>
     </header>
