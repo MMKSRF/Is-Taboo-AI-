@@ -1,12 +1,23 @@
-// tailwind.config.js
 /** @type {import('tailwindcss').Config} */
-export default {
+module.exports = {
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        primary: 'var(--color-primary)',
+        secondary: 'var(--color-secondary)',
+        bg: 'var(--color-bg)',
+        text: 'var(--color-text)',
+        history: 'var(--color-history)',
+      },
+       fontFamily: {
+        serifAncizar: ['"Ancizar Serif"', 'serif'],
+        handlee: ['Handlee', 'cursive'],
+      },
+    }, 
   },
   plugins: [],
 }

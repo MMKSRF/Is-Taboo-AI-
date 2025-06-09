@@ -1,28 +1,30 @@
-import { useEffect, useRef } from "react";
-import gsap from "gsap";
+// import Loading from "./Components/Loading";
+
+import Main from "./Pages/Main";
+import Headers from "./Components/Common/Header";
+import { HistoryToggleProvider , HistoryManagerContextProvider } from "./Contexts/HistoryContext";
+
 
 function App() {
-  const boxRef = useRef();
+  return(
+    <>
+     <HistoryToggleProvider>
 
-  useEffect(() => {
-    gsap.to(boxRef.current, {
-      x: 200,
-      rotation: 360,
-      duration: 2,
-      ease: "power2.out",
-      repeat: -1,
-      yoyo: true,
-    });
-  }, []);
+        <HistoryManagerContextProvider>
+          <div className="flex h-screen flex-col bg-bg text-text">
+          <Headers />
+          <Main />
+           </div>
+        </HistoryManagerContextProvider>
 
-  return (
-    <div className="flex justify-center items-center h-screen bg-gray-900">
-      <div
-        ref={boxRef}
-        className="w-32 h-32 bg-blue-500 rounded-lg"
-      ></div>
-    </div>
-  );
+      
+    
+     </HistoryToggleProvider>
+
+
+
+    </>
+  )
 }
 
 export default App;

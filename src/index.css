@@ -1,1 +1,29 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+:root {
+  /* Light mode (Earthy Warm) */
+   --color-primary:#007FFF;   
+  --color-secondary: #7eb8f3;  
+  --color-bg: hsla(213, 63%, 84%, 0.506);        
+  --color-text: #49413c;
+  --color-history: #0167ce47; /* Light background for history */       
+ 
+}
+
+[data-theme="dark"] {
+  /* Dark mode (Bold & Modern) */
+
+
+  --color-primary:#007FFF ;    
+  --color-secondary: #1469bf;  
+  --color-bg: #333333;         
+  --color-text: #ededed;
+  --color-history: #0080ff7d; /* Light background for history */       
+  
+
+  
+}
