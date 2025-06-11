@@ -74,10 +74,10 @@ export default function History() {
 
   return (
     <div ref={sidebarRef} className="custom-sidebar text-text bg-history absolute top-0 left-0 bottom-0 z-10">
-      <div className="pl-4 py-2 border-b-2 border-primary hover:opacity-90">
+      <div className="pl-4 py-[0.7rem]  border-b-2 border-primary hover:opacity-90">
         <FiX className="text-blue-500 w-6 h-6 cursor-pointer hover:text-blue-400 active:text-blue-600" onClick={historyClose} />
       </div>
-      <p className="text-text p-4">History Sidebar</p>
+      <p className="text-text p-4 ">History Sidebar</p>
       <div
         className="resizer"
         onMouseDown={() => {

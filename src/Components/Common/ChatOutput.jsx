@@ -1,7 +1,7 @@
 // This is the common chat for the user input and the bot output so this must be reusable 
 import { useEffect } from 'react';
 import { useChatContext } from '../../Contexts/ChatContex';
-import gsap from 'gsap';
+// import gsap from 'gsap';
 
 const ChatOutput = () => {
   const {
@@ -14,24 +14,26 @@ const ChatOutput = () => {
   } = useChatContext(); // ✅ Fixed: added ()
 
   // Animate the latest message
-  useEffect(() => {
-    if (chatContainerRef.current) {
-      const children = chatContainerRef.current.children;
-      if (children.length > 1) {
-        const lastMessage = children[children.length - 2]; // before messagesEndRef
-        gsap.fromTo(
-          lastMessage,
-          { opacity: 0, y: 20 },
-          { opacity: 1, y: 0, duration: 0.4, ease: 'back.out(1)' }
-        );
-      }
-    }
-  }, [messages]);
+  // useEffect(() => {
+  //   if (chatContainerRef.current) {
+  //     const children = chatContainerRef.current.children;
+  //     if (children.length > 1) {
+  //       const lastMessage = children[children.length - 2]; // before messagesEndRef
+  //       gsap.fromTo(
+  //         lastMessage,
+  //         { opacity: 0, y: 20 },
+  //         { opacity: 1, y: 0, duration: 0.4, ease: 'back.out(1)' }
+  //       );
+  //     }
+  //   }
+  // }, [messages]);
 
   // Auto-scroll to bottom
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   }, [messages]);
+
+
 
   return (
     <div className="flex flex-col h-[73vh] w-full mx-auto from-indigo-50 to-cyan-50  rounded-2xl shadow-xl overflow-hidden">
