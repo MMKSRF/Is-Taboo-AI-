@@ -28,7 +28,7 @@ export default function UserChat() {
       {taggle ? (
         <ChatWelcome show={true} />
       ) : (
-        <div className="flex flex-col h-full justify-end items-start w-3/5 p-4 bg-bg">
+        <div className="flex flex-col h-full justify-end items-start w-full md:w-3/5 p-4 bg-bg">
           <ChatOutput />
         </div>
       )}

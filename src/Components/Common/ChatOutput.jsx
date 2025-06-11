@@ -55,35 +55,18 @@ const ChatOutput = () => {
               className={`max-w-[80%] rounded-3xl p-4 ${
                 message.isUser
                   ? 'bg-secondary text-white rounded-br-none'
-                  : 'bg-white text-gray-800 shadow-md rounded-bl-none'
+                  : 'bg-secondary  text-text-900 shadow-md rounded-bl-none'
               }`}
             >
-              <div className="font-semibold mb-1">
+              {/* <div className="font-semibold mb-1">
                 {message.isUser ? 'You' : 'Assistant'}
-              </div>
+              </div> */}
               <div className="whitespace-pre-wrap">{message.text}</div>
             </div>
           </div>
         ))}
         <div ref={messagesEndRef} />
       </div>
-
-      {/* Input Area */}
-     
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
 
 
 

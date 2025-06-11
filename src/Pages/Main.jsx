@@ -18,7 +18,7 @@ const { isHistoryOpen } = useHistoryToggle();
       <div className="bg-bg flex h-full  gap-4 relative  ">
           {/* <Loading /> */}
          {isHistoryOpen && <History />}
-          <div className="relative flex-1 flex flex-col mr-4">
+          <div className="relative flex-1 flex flex-col mr-0 sm:mr-4">
             {/* Chat area with padding bottom so input doesn’t overlap */}
             <div className="flex-1 overflow-y-auto flex justify-center items-center ">
               {/* This is the chat output for the user input and the bot output */}
