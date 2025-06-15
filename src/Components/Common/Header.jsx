@@ -129,10 +129,10 @@ const Header = ( ) => {
       </div>
 
       {/* Bot Name */}
-      <div className="text-center ">
+     { !isHistoryOpen && <div className="text-center ">
         <h1 className="font-serifAncizar text-3xl font-bold text-primary ">Is it Taboo?</h1>
         <p className="font-handlee text-sm text-text opacity-80 mt-1">Powered by Gemini</p>
-      </div>
+      </div>}
 
       {/* Dark Mode Toggle */}
       <div className="flex items-center">

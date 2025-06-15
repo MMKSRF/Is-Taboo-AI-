@@ -33,7 +33,7 @@ export default function History() {
 
     const handleMouseMove = (e) => {
       if (!isResizing.current) return;
-      const newWidth = Math.min(Math.max(e.clientX, 150), 600);
+      const newWidth = Math.min(Math.max(e.clientX, 300), 600);
       el.style.width = `${newWidth}px`;
     };
 
@@ -52,7 +52,6 @@ export default function History() {
 
 
   const historyClose = () => {
-    console.log('Closing history sidebar');
     const el = sidebarRef.current;
    
       gsap.to(el, {
@@ -73,7 +72,7 @@ export default function History() {
   
 
   return (
-    <div ref={sidebarRef} className="custom-sidebar text-text bg-history absolute top-0 left-0 bottom-0 z-10">
+    <div ref={sidebarRef} className="custom-sidebar text-text bg-history absolute top-0 left-0 bottom-0 z-10 w-full sm:w-[300px] ">
       <div className="pl-4 py-[0.7rem]  border-b-2 border-primary hover:opacity-90">
         <FiX className="text-blue-500 w-6 h-6 cursor-pointer hover:text-blue-400 active:text-blue-600" onClick={historyClose} />
       </div>

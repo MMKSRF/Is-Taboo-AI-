@@ -13,8 +13,10 @@
 :root {
   /* Light mode (Earthy Warm) */
    --color-primary:#007FFF;   
-  --color-secondary: #7eb8f3;  
-  --color-bg: hsla(213, 63%, 84%, 0.506);        
+  /* --color-secondary: #7eb8f3;   */
+  --color-secondary: #1886f3;   
+  /* --color-bg: hsla(213, 63%, 84%, 0.506);         */
+  --color-bg: hsla(188, 100%, 24%, 0.121);        
   --color-text: #49413c;
   --color-history: #0167ce47; /* Light background for history */       
  
