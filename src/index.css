@@ -11,28 +11,20 @@
 }
 
 :root {
-  /* Light mode (Earthy Warm) */
-   --color-primary:#007FFF;   
-  /* --color-secondary: #7eb8f3;   */
-  --color-secondary: #1886f3;   
-  /* --color-bg: hsla(213, 63%, 84%, 0.506);         */
-  --color-bg: hsla(188, 100%, 24%, 0.121);        
-  --color-text: #49413c;
-  --color-history: #0167ce47; /* Light background for history */       
- 
+  /* Light mode (Soft & Clean with Subtle Gradient) */
+  --color-primary: #007FFF; /* Retaining your consistent primary blue */
+  --color-secondary: #006ddb; /* A slightly softer blue for secondary actions */
+  --color-bg:#454545 ;
+  --color-text: #c3e1ff; /* A professional, dark grey-blue for text */
+  --color-history: #0080ff7d;
+  
 }
 
 [data-theme="dark"] {
-  /* Dark mode (Bold & Modern) */
-
-
-  --color-primary:#007FFF ;    
-  --color-secondary: #1469bf;  
-  --color-bg: #333333;         
+  /* Dark mode (Bold & Modern) - Keeping this as you liked it */
+  --color-primary: #007FFF;
+  --color-secondary: #1469bf;
+  --color-bg: #333333;
   --color-text: #ededed;
-  --color-history: #0080ff7d; /* Light background for history */       
-  
-
-  
+  --color-history: #0080ff7d;
 }
-

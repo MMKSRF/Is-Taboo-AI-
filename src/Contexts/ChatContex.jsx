@@ -50,7 +50,7 @@ export function ChatContextProvider({ children }) {
       // 1. Get the session ID right before sending the message.
       const sessionId = getSessionId();
 
-      const response = await fetch("http://localhost:3000/chat", {
+      const response = await fetch("http://172.20.10.7:3000/chat", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         // 2. Make sure the body is a JSON string that includes BOTH the question AND the sessionId.
